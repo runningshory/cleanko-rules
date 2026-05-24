@@ -1,0 +1,1117 @@
+{
+  "version": 1,
+  "updated_at": "2026-05-24",
+  "description": "CleanKo PUP Rules — Korean PC Security",
+  "rules": [
+    {
+      "name": "TouchEn nxKey",
+      "vendor": "RaonSecure",
+      "severity": "medium",
+      "description": "인터넷 뱅킹 키보드 보안 프로그램 (제거 어려움)",
+      "detections": [
+        {
+          "type": "registry_uninstall",
+          "keyword": "TouchEn nxKey"
+        },
+        {
+          "type": "process",
+          "name": "TKMain.exe"
+        },
+        {
+          "type": "process",
+          "name": "TKMain64.exe"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles%\\RaonSecure\\TouchEn nxKey"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles(x86)%\\RaonSecure\\TouchEn nxKey"
+        }
+      ],
+      "removal": {
+        "type": "uninstall_string",
+        "keyword": "TouchEn nxKey",
+        "fallback": "manual"
+      }
+    },
+    {
+      "name": "SoftCamp Secure Keyboard",
+      "vendor": "소프트캠프",
+      "severity": "medium",
+      "description": "키보드 보안 프로그램 (금융·공공 사이트 강제 설치)",
+      "detections": [
+        {
+          "type": "registry_uninstall",
+          "keyword": "SoftCamp Secure Keyboard"
+        },
+        {
+          "type": "registry_uninstall",
+          "keyword": "SCSK"
+        },
+        {
+          "type": "process",
+          "name": "SCSkAppMon.exe"
+        },
+        {
+          "type": "process",
+          "name": "SCSkService.exe"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles%\\SoftCamp\\Secure Keyboard"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles(x86)%\\SoftCamp\\Secure Keyboard"
+        }
+      ],
+      "removal": {
+        "type": "uninstall_string",
+        "keyword": "SoftCamp Secure Keyboard",
+        "fallback": "manual"
+      }
+    },
+    {
+      "name": "InteraxShield",
+      "vendor": "인터랙스",
+      "severity": "medium",
+      "description": "키보드·화면 보안 모듈 (금융권 사이트 설치)",
+      "detections": [
+        {
+          "type": "registry_uninstall",
+          "keyword": "InteraxShield"
+        },
+        {
+          "type": "registry_uninstall",
+          "keyword": "Interax Shield"
+        },
+        {
+          "type": "process",
+          "name": "InteraxShield.exe"
+        },
+        {
+          "type": "process",
+          "name": "InteraxSvc.exe"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles%\\Interax\\InteraxShield"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles(x86)%\\Interax\\InteraxShield"
+        }
+      ],
+      "removal": {
+        "type": "uninstall_string",
+        "keyword": "InteraxShield",
+        "fallback": "manual"
+      }
+    },
+    {
+      "name": "MagicLine4NX",
+      "vendor": "드림시큐리티",
+      "severity": "medium",
+      "description": "공인인증서 브라우저 플러그인 (금융·전자정부 사이트 설치)",
+      "detections": [
+        {
+          "type": "registry_uninstall",
+          "keyword": "MagicLine4NX"
+        },
+        {
+          "type": "registry_uninstall",
+          "keyword": "DreamSecurity MagicLine"
+        },
+        {
+          "type": "process",
+          "name": "MagicLine4NX.exe"
+        },
+        {
+          "type": "process",
+          "name": "MlBrService.exe"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles%\\DreamSecurity\\MagicLine4NX"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles(x86)%\\DreamSecurity\\MagicLine4NX"
+        }
+      ],
+      "removal": {
+        "type": "uninstall_string",
+        "keyword": "MagicLine4NX",
+        "fallback": "manual"
+      }
+    },
+    {
+      "name": "CrossEX",
+      "vendor": "한국전자인증 (CrossCert)",
+      "severity": "medium",
+      "description": "전자인증 브라우저 확장 플러그인 (금융·공공기관 설치)",
+      "detections": [
+        {
+          "type": "registry_uninstall",
+          "keyword": "CrossEX"
+        },
+        {
+          "type": "registry_uninstall",
+          "keyword": "CrossWeb"
+        },
+        {
+          "type": "process",
+          "name": "CrossEX.exe"
+        },
+        {
+          "type": "process",
+          "name": "CrossEXService.exe"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles%\\CrossCert\\CrossEX"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles(x86)%\\CrossCert\\CrossEX"
+        }
+      ],
+      "removal": {
+        "type": "uninstall_string",
+        "keyword": "CrossEX",
+        "fallback": "manual"
+      }
+    },
+    {
+      "name": "AnySign4PC",
+      "vendor": "라온시큐어",
+      "severity": "medium",
+      "description": "전자서명 플러그인 (공공기관·금융 사이트 설치)",
+      "detections": [
+        {
+          "type": "registry_uninstall",
+          "keyword": "AnySign4PC"
+        },
+        {
+          "type": "process",
+          "name": "AnySign4PC.exe"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles%\\RaonSecure\\AnySign4PC"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles(x86)%\\RaonSecure\\AnySign4PC"
+        }
+      ],
+      "removal": {
+        "type": "uninstall_string",
+        "keyword": "AnySign4PC",
+        "fallback": "manual"
+      }
+    },
+    {
+      "name": "TouchEn OnePass",
+      "vendor": "라온시큐어",
+      "severity": "medium",
+      "description": "패스워드 통합 관리·생체인증 모듈",
+      "detections": [
+        {
+          "type": "registry_uninstall",
+          "keyword": "TouchEn OnePass"
+        },
+        {
+          "type": "process",
+          "name": "TouchEnOnePass.exe"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles%\\RaonSecure\\TouchEn OnePass"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles(x86)%\\RaonSecure\\TouchEn OnePass"
+        }
+      ],
+      "removal": {
+        "type": "uninstall_string",
+        "keyword": "TouchEn OnePass",
+        "fallback": "manual"
+      }
+    },
+    {
+      "name": "SignKorea",
+      "vendor": "한국정보인증 (KICA)",
+      "severity": "medium",
+      "description": "공인인증서 관리 플러그인 (전자정부·금융권 설치)",
+      "detections": [
+        {
+          "type": "registry_uninstall",
+          "keyword": "SignKorea"
+        },
+        {
+          "type": "registry_uninstall",
+          "keyword": "KICA SignKorea"
+        },
+        {
+          "type": "process",
+          "name": "SignKorea.exe"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles%\\KICA\\SignKorea"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles(x86)%\\KICA\\SignKorea"
+        }
+      ],
+      "removal": {
+        "type": "uninstall_string",
+        "keyword": "SignKorea",
+        "fallback": "manual"
+      }
+    },
+    {
+      "name": "npEfdsWCtrl (NPKI 모듈)",
+      "vendor": "공공기관 NPKI",
+      "severity": "low",
+      "description": "공공기관 전자서명 보안 모듈 (정부24 등에서 설치)",
+      "detections": [
+        {
+          "type": "registry_uninstall",
+          "keyword": "npEfdsWCtrl"
+        },
+        {
+          "type": "registry_uninstall",
+          "keyword": "EfdsWCtrl"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles%\\npEfdsWCtrl"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles(x86)%\\npEfdsWCtrl"
+        }
+      ],
+      "removal": {
+        "type": "uninstall_string",
+        "keyword": "npEfdsWCtrl",
+        "fallback": "manual"
+      }
+    },
+    {
+      "name": "KSign",
+      "vendor": "케이사인",
+      "severity": "medium",
+      "description": "공인인증서 전자서명 모듈",
+      "detections": [
+        {
+          "type": "registry_uninstall",
+          "keyword": "KSign"
+        },
+        {
+          "type": "registry_uninstall",
+          "keyword": "케이사인"
+        },
+        {
+          "type": "process",
+          "name": "KSign.exe"
+        },
+        {
+          "type": "process",
+          "name": "KSignCert.exe"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles%\\KSign"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles(x86)%\\KSign"
+        }
+      ],
+      "removal": {
+        "type": "uninstall_string",
+        "keyword": "KSign",
+        "fallback": "manual"
+      }
+    },
+    {
+      "name": "INIpay",
+      "vendor": "KG이니시스",
+      "severity": "medium",
+      "description": "온라인 결제 보안 모듈 (쇼핑몰 결제 시 강제 설치)",
+      "detections": [
+        {
+          "type": "registry_uninstall",
+          "keyword": "INIpay"
+        },
+        {
+          "type": "registry_uninstall",
+          "keyword": "INISafeWeb"
+        },
+        {
+          "type": "process",
+          "name": "INIpay.exe"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles%\\inicis\\INIpay"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles(x86)%\\inicis"
+        }
+      ],
+      "removal": {
+        "type": "uninstall_string",
+        "keyword": "INIpay",
+        "fallback": "manual"
+      }
+    },
+    {
+      "name": "Settlebank 세틀뱅크",
+      "vendor": "세틀뱅크",
+      "severity": "medium",
+      "description": "인터넷 결제 보안 모듈 (쇼핑몰·공공 결제 설치)",
+      "detections": [
+        {
+          "type": "registry_uninstall",
+          "keyword": "Settlebank"
+        },
+        {
+          "type": "registry_uninstall",
+          "keyword": "세틀뱅크"
+        },
+        {
+          "type": "registry_uninstall",
+          "keyword": "SettleBank"
+        },
+        {
+          "type": "process",
+          "name": "Settlebank.exe"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles%\\Settlebank"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles(x86)%\\Settlebank"
+        }
+      ],
+      "removal": {
+        "type": "uninstall_string",
+        "keyword": "Settlebank",
+        "fallback": "manual"
+      }
+    },
+    {
+      "name": "KCP 지불결제",
+      "vendor": "NHN KCP",
+      "severity": "medium",
+      "description": "NHN KCP 온라인 결제 보안 플러그인",
+      "detections": [
+        {
+          "type": "registry_uninstall",
+          "keyword": "KCP"
+        },
+        {
+          "type": "registry_uninstall",
+          "keyword": "NHN KCP"
+        },
+        {
+          "type": "process",
+          "name": "KCPclient.exe"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles%\\KCP"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles(x86)%\\KCP"
+        }
+      ],
+      "removal": {
+        "type": "uninstall_string",
+        "keyword": "KCP",
+        "fallback": "manual"
+      }
+    },
+    {
+      "name": "nProtect Online Security",
+      "vendor": "INCA Internet",
+      "severity": "medium",
+      "description": "온라인 게임·뱅킹 보안 프로그램 (백그라운드 상시 실행)",
+      "detections": [
+        {
+          "type": "registry_uninstall",
+          "keyword": "nProtect Online Security"
+        },
+        {
+          "type": "process",
+          "name": "npsc.exe"
+        },
+        {
+          "type": "process",
+          "name": "npsvc32.exe"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles%\\INCA Internet\\nProtect Online Security"
+        }
+      ],
+      "removal": {
+        "type": "uninstall_string",
+        "keyword": "nProtect Online Security",
+        "fallback": "manual"
+      }
+    },
+    {
+      "name": "nProtect Netizen",
+      "vendor": "INCA Internet",
+      "severity": "medium",
+      "description": "공공기관 웹 보안 플러그인 (프로세스 상시 대기)",
+      "detections": [
+        {
+          "type": "registry_uninstall",
+          "keyword": "nProtect Netizen"
+        },
+        {
+          "type": "process",
+          "name": "npNtZ32.exe"
+        },
+        {
+          "type": "process",
+          "name": "npNtZ64.exe"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles%\\INCA Internet\\nProtect Netizen"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles(x86)%\\INCA Internet\\nProtect Netizen"
+        }
+      ],
+      "removal": {
+        "type": "uninstall_string",
+        "keyword": "nProtect Netizen",
+        "fallback": "manual"
+      }
+    },
+    {
+      "name": "Wizvera Veraport",
+      "vendor": "Wizvera",
+      "severity": "medium",
+      "description": "웹사이트 보안 플러그인 설치 관리자 (다수 금융사 사용)",
+      "detections": [
+        {
+          "type": "registry_uninstall",
+          "keyword": "Veraport"
+        },
+        {
+          "type": "registry_uninstall",
+          "keyword": "Wizvera"
+        },
+        {
+          "type": "process",
+          "name": "veraport.exe"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles%\\Wizvera"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles(x86)%\\Wizvera"
+        }
+      ],
+      "removal": {
+        "type": "uninstall_string",
+        "keyword": "Veraport",
+        "fallback": "manual"
+      }
+    },
+    {
+      "name": "AhnLab Online Security",
+      "vendor": "안랩 (AhnLab)",
+      "severity": "medium",
+      "description": "웹 보안 프로그램 (금융·공공 사이트에서 강제 설치)",
+      "detections": [
+        {
+          "type": "registry_uninstall",
+          "keyword": "AhnLab Online Security"
+        },
+        {
+          "type": "process",
+          "name": "AhnSD.exe"
+        },
+        {
+          "type": "process",
+          "name": "AhnInst.exe"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles%\\AhnLab\\AOS"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles(x86)%\\AhnLab\\AOS"
+        }
+      ],
+      "removal": {
+        "type": "uninstall_string",
+        "keyword": "AhnLab Online Security",
+        "fallback": "manual"
+      }
+    },
+    {
+      "name": "AhnLab Safe Transaction",
+      "vendor": "안랩 (AhnLab)",
+      "severity": "low",
+      "description": "인터넷 뱅킹 전용 보안 프로그램",
+      "detections": [
+        {
+          "type": "registry_uninstall",
+          "keyword": "AhnLab Safe Transaction"
+        },
+        {
+          "type": "process",
+          "name": "ASTService.exe"
+        },
+        {
+          "type": "process",
+          "name": "ASTSvc.exe"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles%\\AhnLab\\AST"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles(x86)%\\AhnLab\\AST"
+        }
+      ],
+      "removal": {
+        "type": "uninstall_string",
+        "keyword": "AhnLab Safe Transaction",
+        "fallback": "manual"
+      }
+    },
+    {
+      "name": "IPinside LWS",
+      "vendor": "인사이트",
+      "severity": "high",
+      "description": "금융 사이트 보안으로 위장한 PC 정보 수집 모듈 (논란 있음)",
+      "detections": [
+        {
+          "type": "registry_uninstall",
+          "keyword": "IPinside"
+        },
+        {
+          "type": "registry_uninstall",
+          "keyword": "IPinside LWS"
+        },
+        {
+          "type": "process",
+          "name": "IpInsideLws.exe"
+        },
+        {
+          "type": "process",
+          "name": "IpInsideLws64.exe"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles%\\IPinside"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles(x86)%\\IPinside"
+        }
+      ],
+      "removal": {
+        "type": "uninstall_string",
+        "keyword": "IPinside",
+        "fallback": "manual"
+      }
+    },
+    {
+      "name": "TouchEn PC보안",
+      "vendor": "라온시큐어",
+      "severity": "medium",
+      "description": "브라우저 위변조·스크린 캡처 방지 보안 모듈",
+      "detections": [
+        {
+          "type": "registry_uninstall",
+          "keyword": "TouchEn PC보안"
+        },
+        {
+          "type": "registry_uninstall",
+          "keyword": "TouchEn PC Security"
+        },
+        {
+          "type": "process",
+          "name": "TouchEnPC.exe"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles%\\RaonSecure\\TouchEn PC보안"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles(x86)%\\RaonSecure\\TouchEn PC보안"
+        }
+      ],
+      "removal": {
+        "type": "uninstall_string",
+        "keyword": "TouchEn PC보안",
+        "fallback": "manual"
+      }
+    },
+    {
+      "name": "MarkAny e-Page",
+      "vendor": "마크애니 (MarkAny)",
+      "severity": "low",
+      "description": "DRM 문서 보안 뷰어 (금융·공공기관 배포 문서 열기용)",
+      "detections": [
+        {
+          "type": "registry_uninstall",
+          "keyword": "MarkAny"
+        },
+        {
+          "type": "registry_uninstall",
+          "keyword": "e-Page"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles%\\MarkAny"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles(x86)%\\MarkAny"
+        }
+      ],
+      "removal": {
+        "type": "uninstall_string",
+        "keyword": "MarkAny",
+        "fallback": "manual"
+      }
+    },
+    {
+      "name": "Fasoo DRM",
+      "vendor": "파수닷컴 (Fasoo)",
+      "severity": "medium",
+      "description": "기업·기관용 문서 보안 DRM 솔루션 (배포 문서 제어)",
+      "detections": [
+        {
+          "type": "registry_uninstall",
+          "keyword": "Fasoo"
+        },
+        {
+          "type": "registry_uninstall",
+          "keyword": "FasooDRM"
+        },
+        {
+          "type": "process",
+          "name": "FasooClient.exe"
+        },
+        {
+          "type": "process",
+          "name": "FasooService.exe"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles%\\Fasoo"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles(x86)%\\Fasoo"
+        }
+      ],
+      "removal": {
+        "type": "uninstall_string",
+        "keyword": "Fasoo",
+        "fallback": "manual"
+      }
+    },
+    {
+      "name": "SoftCamp Secure Disk",
+      "vendor": "소프트캠프",
+      "severity": "medium",
+      "description": "가상 암호화 디스크 DRM 솔루션",
+      "detections": [
+        {
+          "type": "registry_uninstall",
+          "keyword": "SoftCamp Secure Disk"
+        },
+        {
+          "type": "registry_uninstall",
+          "keyword": "SecureDisk"
+        },
+        {
+          "type": "process",
+          "name": "SCSDService.exe"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles%\\SoftCamp\\SecureDisk"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles(x86)%\\SoftCamp\\SecureDisk"
+        }
+      ],
+      "removal": {
+        "type": "uninstall_string",
+        "keyword": "SoftCamp Secure Disk",
+        "fallback": "manual"
+      }
+    },
+    {
+      "name": "nProtect GameGuard",
+      "vendor": "INCA Internet",
+      "severity": "medium",
+      "description": "게임 핵 방지 드라이버 (게임 종료 후에도 백그라운드 잔류)",
+      "detections": [
+        {
+          "type": "registry_uninstall",
+          "keyword": "nProtect GameGuard"
+        },
+        {
+          "type": "process",
+          "name": "GameMon.des"
+        },
+        {
+          "type": "process",
+          "name": "GameMon64.des"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles%\\INCA Internet\\nProtect GameGuard"
+        }
+      ],
+      "removal": {
+        "type": "uninstall_string",
+        "keyword": "nProtect GameGuard",
+        "fallback": "manual"
+      }
+    },
+    {
+      "name": "HackShield",
+      "vendor": "안랩 (AhnLab)",
+      "severity": "medium",
+      "description": "온라인 게임 핵 방지 보안 드라이버 (커널 레벨 동작)",
+      "detections": [
+        {
+          "type": "registry_uninstall",
+          "keyword": "HackShield"
+        },
+        {
+          "type": "process",
+          "name": "HSUpdate.exe"
+        },
+        {
+          "type": "process",
+          "name": "HShield.exe"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles%\\AhnLab\\HackShield"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles(x86)%\\AhnLab\\HackShield"
+        }
+      ],
+      "removal": {
+        "type": "uninstall_string",
+        "keyword": "HackShield",
+        "fallback": "manual"
+      }
+    },
+    {
+      "name": "알툴바 (ALToolbar)",
+      "vendor": "이스트소프트",
+      "severity": "low",
+      "description": "브라우저 도구바 — 주소창 검색 광고 삽입, 알집 설치 시 번들",
+      "detections": [
+        {
+          "type": "registry_uninstall",
+          "keyword": "알툴바"
+        },
+        {
+          "type": "registry_uninstall",
+          "keyword": "ALToolbar"
+        },
+        {
+          "type": "registry_uninstall",
+          "keyword": "ESTsoft ALToolbar"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles%\\ESTsoft\\ALToolbar"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles(x86)%\\ESTsoft\\ALToolbar"
+        }
+      ],
+      "removal": {
+        "type": "uninstall_string",
+        "keyword": "ALToolbar",
+        "fallback": "manual"
+      }
+    },
+    {
+      "name": "Daum ToolBar (다음 툴바)",
+      "vendor": "카카오 (구 다음)",
+      "severity": "low",
+      "description": "브라우저 도구바 — 기본 검색 엔진 변경",
+      "detections": [
+        {
+          "type": "registry_uninstall",
+          "keyword": "DaumToolBar"
+        },
+        {
+          "type": "registry_uninstall",
+          "keyword": "Daum ToolBar"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles%\\Daum\\ToolBar"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles(x86)%\\Daum\\ToolBar"
+        }
+      ],
+      "removal": {
+        "type": "uninstall_string",
+        "keyword": "DaumToolBar",
+        "fallback": "manual"
+      }
+    },
+    {
+      "name": "Naver Toolbar (네이버 툴바)",
+      "vendor": "네이버 (Naver)",
+      "severity": "low",
+      "description": "브라우저 도구바 — 기본 검색 엔진 변경",
+      "detections": [
+        {
+          "type": "registry_uninstall",
+          "keyword": "NaverToolbar"
+        },
+        {
+          "type": "registry_uninstall",
+          "keyword": "Naver Toolbar"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles%\\Naver\\NaverToolbar"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles(x86)%\\Naver\\NaverToolbar"
+        }
+      ],
+      "removal": {
+        "type": "uninstall_string",
+        "keyword": "NaverToolbar",
+        "fallback": "manual"
+      }
+    },
+    {
+      "name": "Zum Toolbar (줌 툴바)",
+      "vendor": "줌인터넷",
+      "severity": "low",
+      "description": "브라우저 도구바 — 시작 페이지·검색 엔진 변경",
+      "detections": [
+        {
+          "type": "registry_uninstall",
+          "keyword": "ZumToolbar"
+        },
+        {
+          "type": "registry_uninstall",
+          "keyword": "Zum Toolbar"
+        },
+        {
+          "type": "registry_uninstall",
+          "keyword": "줌툴바"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles%\\ZumInternet\\ZumToolbar"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles(x86)%\\ZumInternet\\ZumToolbar"
+        }
+      ],
+      "removal": {
+        "type": "uninstall_string",
+        "keyword": "ZumToolbar",
+        "fallback": "manual"
+      }
+    },
+    {
+      "name": "MaImgsf (마이미지샵)",
+      "vendor": "마이미지샵",
+      "severity": "high",
+      "description": "광고성 이미지 소프트웨어 (동의 없이 설치·광고 팝업 생성)",
+      "detections": [
+        {
+          "type": "registry_uninstall",
+          "keyword": "MaImgsf"
+        },
+        {
+          "type": "registry_uninstall",
+          "keyword": "마이미지샵"
+        },
+        {
+          "type": "process",
+          "name": "MaImgsf.exe"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles%\\MaImgsf"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles(x86)%\\MaImgsf"
+        }
+      ],
+      "removal": {
+        "type": "uninstall_string",
+        "keyword": "MaImgsf",
+        "fallback": "manual"
+      }
+    },
+    {
+      "name": "SmartPCFixer",
+      "vendor": "SmartPCFixer",
+      "severity": "high",
+      "description": "가짜 PC 최적화 도구 — 결제 유도 스케어웨어",
+      "detections": [
+        {
+          "type": "registry_uninstall",
+          "keyword": "SmartPCFixer"
+        },
+        {
+          "type": "process",
+          "name": "SmartPCFixer.exe"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles%\\SmartPCFixer"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles(x86)%\\SmartPCFixer"
+        }
+      ],
+      "removal": {
+        "type": "uninstall_string",
+        "keyword": "SmartPCFixer",
+        "fallback": "manual"
+      }
+    },
+    {
+      "name": "PC Doctor (가짜 진단 도구)",
+      "vendor": "미상",
+      "severity": "high",
+      "description": "가짜 PC 진단 결과로 결제를 유도하는 스케어웨어 계열",
+      "detections": [
+        {
+          "type": "registry_uninstall",
+          "keyword": "PC Doctor"
+        },
+        {
+          "type": "registry_uninstall",
+          "keyword": "PCDoctor"
+        },
+        {
+          "type": "process",
+          "name": "PCDoctor.exe"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles%\\PC Doctor"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles(x86)%\\PC Doctor"
+        }
+      ],
+      "removal": {
+        "type": "uninstall_string",
+        "keyword": "PC Doctor",
+        "fallback": "manual"
+      }
+    },
+    {
+      "name": "DelfG 광고 모듈",
+      "vendor": "미상 (광고 네트워크)",
+      "severity": "high",
+      "description": "광고 팝업 생성 악성 번들 — 브라우저 설정 변경 및 광고 삽입",
+      "detections": [
+        {
+          "type": "registry_uninstall",
+          "keyword": "DelfG"
+        },
+        {
+          "type": "process",
+          "name": "DelfG.exe"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles%\\DelfG"
+        },
+        {
+          "type": "directory",
+          "path": "%APPDATA%\\DelfG"
+        }
+      ],
+      "removal": {
+        "type": "uninstall_string",
+        "keyword": "DelfG",
+        "fallback": "manual"
+      }
+    },
+    {
+      "name": "ScreenSafer (가짜 화면보안)",
+      "vendor": "미상",
+      "severity": "high",
+      "description": "정상 보안 프로그램으로 위장한 광고성 상주 프로그램",
+      "detections": [
+        {
+          "type": "registry_uninstall",
+          "keyword": "ScreenSafer"
+        },
+        {
+          "type": "process",
+          "name": "ScreenSafer.exe"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles%\\ScreenSafer"
+        },
+        {
+          "type": "directory",
+          "path": "%ProgramFiles(x86)%\\ScreenSafer"
+        }
+      ],
+      "removal": {
+        "type": "uninstall_string",
+        "keyword": "ScreenSafer",
+        "fallback": "manual"
+      }
+    }
+  ]
+}
