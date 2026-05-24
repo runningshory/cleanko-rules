@@ -1,7 +1,7 @@
 {
-  "version": 1,
+  "version": 2,
   "updated_at": "2026-05-24",
-  "description": "CleanKo PUP Rules — Korean PC Security",
+  "description": "CleanKo PUP Rules v2 — startup 탐지 추가",
   "rules": [
     {
       "name": "TouchEn nxKey",
@@ -9,6 +9,10 @@
       "severity": "medium",
       "description": "인터넷 뱅킹 키보드 보안 프로그램 (제거 어려움)",
       "detections": [
+        {
+          "type": "startup",
+          "keyword": "TouchEn"
+        },
         {
           "type": "registry_uninstall",
           "keyword": "TouchEn nxKey"
@@ -42,6 +46,10 @@
       "severity": "medium",
       "description": "키보드 보안 프로그램 (금융·공공 사이트 강제 설치)",
       "detections": [
+        {
+          "type": "startup",
+          "keyword": "SoftCamp"
+        },
         {
           "type": "registry_uninstall",
           "keyword": "SoftCamp Secure Keyboard"
@@ -80,6 +88,10 @@
       "description": "키보드·화면 보안 모듈 (금융권 사이트 설치)",
       "detections": [
         {
+          "type": "startup",
+          "keyword": "Interax"
+        },
+        {
           "type": "registry_uninstall",
           "keyword": "InteraxShield"
         },
@@ -116,6 +128,10 @@
       "severity": "medium",
       "description": "공인인증서 브라우저 플러그인 (금융·전자정부 사이트 설치)",
       "detections": [
+        {
+          "type": "startup",
+          "keyword": "MagicLine"
+        },
         {
           "type": "registry_uninstall",
           "keyword": "MagicLine4NX"
@@ -154,6 +170,10 @@
       "description": "전자인증 브라우저 확장 플러그인 (금융·공공기관 설치)",
       "detections": [
         {
+          "type": "startup",
+          "keyword": "CrossEX"
+        },
+        {
           "type": "registry_uninstall",
           "keyword": "CrossEX"
         },
@@ -191,6 +211,10 @@
       "description": "전자서명 플러그인 (공공기관·금융 사이트 설치)",
       "detections": [
         {
+          "type": "startup",
+          "keyword": "AnySign"
+        },
+        {
           "type": "registry_uninstall",
           "keyword": "AnySign4PC"
         },
@@ -219,6 +243,10 @@
       "severity": "medium",
       "description": "패스워드 통합 관리·생체인증 모듈",
       "detections": [
+        {
+          "type": "startup",
+          "keyword": "TouchEn OnePass"
+        },
         {
           "type": "registry_uninstall",
           "keyword": "TouchEn OnePass"
@@ -348,6 +376,10 @@
       "description": "온라인 결제 보안 모듈 (쇼핑몰 결제 시 강제 설치)",
       "detections": [
         {
+          "type": "startup",
+          "keyword": "INIpay"
+        },
+        {
           "type": "registry_uninstall",
           "keyword": "INIpay"
         },
@@ -451,6 +483,10 @@
       "description": "온라인 게임·뱅킹 보안 프로그램 (백그라운드 상시 실행)",
       "detections": [
         {
+          "type": "startup",
+          "keyword": "nProtect"
+        },
+        {
           "type": "registry_uninstall",
           "keyword": "nProtect Online Security"
         },
@@ -479,6 +515,10 @@
       "severity": "medium",
       "description": "공공기관 웹 보안 플러그인 (프로세스 상시 대기)",
       "detections": [
+        {
+          "type": "startup",
+          "keyword": "nProtect Netizen"
+        },
         {
           "type": "registry_uninstall",
           "keyword": "nProtect Netizen"
@@ -513,6 +553,10 @@
       "description": "웹사이트 보안 플러그인 설치 관리자 (다수 금융사 사용)",
       "detections": [
         {
+          "type": "startup",
+          "keyword": "Veraport"
+        },
+        {
           "type": "registry_uninstall",
           "keyword": "Veraport"
         },
@@ -545,6 +589,10 @@
       "severity": "medium",
       "description": "웹 보안 프로그램 (금융·공공 사이트에서 강제 설치)",
       "detections": [
+        {
+          "type": "startup",
+          "keyword": "AhnLab Online Security"
+        },
         {
           "type": "registry_uninstall",
           "keyword": "AhnLab Online Security"
@@ -611,6 +659,10 @@
       "severity": "high",
       "description": "금융 사이트 보안으로 위장한 PC 정보 수집 모듈 (논란 있음)",
       "detections": [
+        {
+          "type": "startup",
+          "keyword": "IPinside"
+        },
         {
           "type": "registry_uninstall",
           "keyword": "IPinside"
@@ -711,6 +763,10 @@
       "description": "기업·기관용 문서 보안 DRM 솔루션 (배포 문서 제어)",
       "detections": [
         {
+          "type": "startup",
+          "keyword": "Fasoo"
+        },
+        {
           "type": "registry_uninstall",
           "keyword": "Fasoo"
         },
@@ -809,6 +865,10 @@
       "severity": "medium",
       "description": "온라인 게임 핵 방지 보안 드라이버 (커널 레벨 동작)",
       "detections": [
+        {
+          "type": "startup",
+          "keyword": "HackShield"
+        },
         {
           "type": "registry_uninstall",
           "keyword": "HackShield"
